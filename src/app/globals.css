@@ -1,1 +1,74 @@
 @import "tailwindcss";
+
+:root {
+  /* Backgrounds */
+  --background: #f4f9f9;
+  --surface: #ffffff;
+  --surface-secondary: #e3eef0;
+
+  /* Text / Foreground */
+  --foreground: #072c32;
+  --foreground-secondary: #4a6d73;
+
+  /* Brand / Primary */
+  --primary: #0b727f;
+  --primary-hover: #0bb3b8;
+
+  /* Borders */
+  --border: #d0dfe2;
+  --border-card: #072c32;
+}
+
+.dark {
+  /* Backgrounds */
+  --background: #07353c;
+  --surface: #0b515b;
+  --surface-secondary: #0e434b;
+
+  /* Text / Foreground */
+  --foreground: #ffffff;
+  --foreground-secondary: #8da9ad;
+
+  /* Brand / Primary */
+  --primary: #0bb3b8;
+  --primary-hover: #12ccd2;
+
+  /* Borders */
+  --border: #0e434b;
+  --border-card: #000000;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-border: var(--border);
+  --color-border-card: var(--border-card);
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.5;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: #ffffff;
+}
