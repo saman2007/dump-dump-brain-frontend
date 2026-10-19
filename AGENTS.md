@@ -20,7 +20,13 @@ While platforms like Twitter/X or Threads often focus on public debate, news com
 
 Low Friction, Raw Expression: Users don't need polished articles or performative hot takes—they just "dump" whatever is on their mind.
 Emotional Context: Thoughts are deeply tied to emotions. Every post carries a mood indicator that gives readers the vibe and sentiment behind the words.
-Meaningful Engagement: Instead of generic thumbs-up likes, engagement is expressive and conversational through emotion-aligned reactions and threaded replies.
+Meaningful Engagement: Instead of generic thumbs-up likes, engagement is expressive and conversational through emotion-aligned reactions and threaded replies. Each dump can have at most one reaction by a specific user (single reaction per user per dump).
+
+### Moods and Reactions
+
+- **Available Moods (`DUMP_MOOD`)**: `sad`, `happy`, `thinking`, `pensive`, `meh`, `angry`, `exhausted`, `confused`, `inspired`, `hyped`, `funny`, `peaceful`, `anxious`. Each dump is tagged with exactly one mood.
+- **Available Reactions (`DUMP_REACTION`)**: `understand`, `loved`, `heart_break`, `melting`, `funny`, `mind_blown`.
+- **Reaction Constraint**: A user can only choose at most one reaction on any given dump (reacting with another reaction replaces the previous one, and clicking the active reaction removes it).
 
 ## General Rules
 
@@ -28,8 +34,10 @@ Meaningful Engagement: Instead of generic thumbs-up likes, engagement is express
 
 2. Generate texts for sections, that are friendly and natural.
 
+3. For typescript types, if you noticed that a type or an interface is general, create that type or interface in `/src/types`.
+
 ## Folder Structure and Naming Convention
 
-- Components name, files name(inside a folder of `/src/{folderName}`) and folders name(inside a folder of `/src/{folderName}`) should be in pascal case.
+- Components name, files name(inside a folder of `/src/{folderName}`, only in `components` and `containers` folders) and folders name(inside a folder of `/src/{folderName}`, only in `components` and `containers` folders) should be in pascal case.
 - Components that are related to a specific page must be in `/src/containers/{PageName}/{SectionName}/{ComponentName}.tsx`. For example if there is a hero section in home page, `HeroSection` component should be in `src/containers/Home/HeroSection/HeroSection.tsx` and inside `src/containers/Home/HeroSection/` there are components related to `HeroSection`.
 - Components that are for general use cases should be inside `/src/components/` and in a folder with their name or their group name. For example if we have a component called `Badge`, this component is a general component and should be in `/src/components/Badge/Badge.tsx`. For example if we have form related components like `TextArea`, `Input`, `CheckBox`, etc, these components should be inside `/src/components/Form/{ComponentName}.tsx`.

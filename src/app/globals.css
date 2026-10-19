@@ -1,44 +1,57 @@
 @import "tailwindcss";
 
 :root {
+  /* Logo */
+  --brain-left-color: #0d9488;
+  --brain-right-color: #111827;
+
   /* Backgrounds */
-  --background: #f4f9f9;
+  --background: #f9fafb;
   --surface: #ffffff;
-  --surface-secondary: #e3eef0;
+  --surface-secondary: #f3f4f6;
 
   /* Text / Foreground */
-  --foreground: #072c32;
-  --foreground-secondary: #4a6d73;
+  --foreground: #111827;
+  --foreground-secondary: #6b7280;
 
   /* Brand / Primary */
-  --primary: #0b727f;
-  --primary-hover: #0bb3b8;
+  --primary: #0f766e;
+  --primary-hover: #0d9488;
 
   /* Borders */
-  --border: #d0dfe2;
-  --border-card: #072c32;
+  --border: #e5e7eb;
+  --border-card: #e5e7eb;
 }
 
 .dark {
+  /* Logo */
+  --brain-left-color: #14b8a6;
+  --brain-right-color: #f9fafb;
+
   /* Backgrounds */
-  --background: #07353c;
-  --surface: #0b515b;
-  --surface-secondary: #0e434b;
+  --background: #0b0f14;
+  --surface: #141a22;
+  --surface-secondary: #1c2430;
 
   /* Text / Foreground */
-  --foreground: #ffffff;
-  --foreground-secondary: #8da9ad;
+  --foreground: #f9fafb;
+  --foreground-secondary: #9ca3af;
 
   /* Brand / Primary */
-  --primary: #0bb3b8;
-  --primary-hover: #12ccd2;
+  --primary: #14b8a6;
+  --primary-hover: #2dd4bf;
 
   /* Borders */
-  --border: #0e434b;
-  --border-card: #000000;
+  --border: #253040;
+  --border-card: #253040;
 }
 
 @theme inline {
+  --font-sans: var(--font-roboto), system-ui, sans-serif;
+  --font-roboto: var(--font-roboto), system-ui, sans-serif;
+  --font-heading: var(--font-paytone), sans-serif;
+  --font-hand: var(--font-patrick), cursive;
+
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-surface-secondary: var(--surface-secondary);
@@ -65,7 +78,7 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   line-height: 1.5;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 ::selection {
