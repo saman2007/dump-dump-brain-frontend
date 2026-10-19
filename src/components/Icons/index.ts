@@ -16,3 +16,4 @@ export { SunIcon } from "./SunIcon";
 export { MoonIcon } from "./MoonIcon";
 export { ChevronLeftIcon } from "./ChevronLeftIcon";
 export { ChevronRightIcon } from "./ChevronRightIcon";
+export { HandHeartIcon } from "./HandHeartIcon";

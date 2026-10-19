@@ -1,9 +1,5 @@
 import React from "react";
-import MoodPill from "@/components/MoodPill/MoodPill";
-import ReactionPill from "@/components/ReactionPill/ReactionPill";
-import { FeatherIcon } from "@/components/Icons/FeatherIcon";
-import { CompassIcon } from "@/components/Icons/CompassIcon";
-import { HeartHandIcon } from "@/components/Icons/HeartHandIcon";
+import { FeatherIcon, SparklesIcon, HandHeartIcon } from "@/components/Icons";
 
 export default function PhilosophySection() {
   return (
@@ -11,110 +7,122 @@ export default function PhilosophySection() {
       id="philosophy"
       className="py-24 md:py-32 bg-surface-secondary/40 border-y border-border/70 relative"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
-        {/* Editorial Section Header */}
-        <div className="max-w-2xl space-y-4">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-normal text-foreground tracking-tight leading-[1.15]">
-            Social feeds made us perform.
-            <br />
-            <span className="text-primary italic">
-              We just wanted to talk.
-            </span>
-          </h2>
-          <p className="text-base sm:text-lg text-foreground-secondary leading-relaxed">
-            Every digital platform slowly morphed into a stage. Users started
-            auditioning for an imaginary audience. Dump Dump Brain is designed
-            as a quiet room where the stage doesn&apos;t exist.
-          </p>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-12 sm:space-y-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end">
+          <div className="lg:col-span-7 space-y-3">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-normal text-foreground tracking-tight leading-[1.15]">
+              Social feeds made us perform.
+              <br />
+              <span className="text-primary italic">
+                We just wanted to be ourselves.
+              </span>
+            </h2>
+          </div>
+
+          <div className="lg:col-span-5 space-y-3 lg:pl-8 lg:border-l lg:border-border m-auto">
+            <p className="text-base sm:text-lg text-foreground-secondary leading-relaxed font-normal">
+              Sometimes you just want to be yourself. You just want to share
+              your thoughts with someone. But you may be ashamed to talk about
+              them, even to the closest people in your life.
+            </p>
+          </div>
         </div>
 
-        {/* Dynamic Asymmetrical Manifest Blocks */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          {/* Block 1: Low Friction & Raw Expression (Large Feature Block) */}
-          <div className="lg:col-span-7 rounded-3xl bg-surface border border-border p-8 sm:p-10 shadow-xs flex flex-col justify-between space-y-6">
-            <div className="space-y-4">
-              <div className="w-11 h-11 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20">
-                <FeatherIcon className="w-5 h-5" />
-              </div>
-              <h3 className="font-heading text-2xl font-normal text-foreground tracking-tight">
-                Low friction, zero rehearsal
-              </h3>
-              <p className="text-foreground-secondary leading-relaxed text-sm sm:text-base">
-                The gap between thinking something and sharing it is where self-doubt
-                kills truth. On traditional platforms, you rewrite a thought four
-                times to sound clever. Here, an unfinished fragment or a 3:00 AM
-                realization is already whole.
-              </p>
-            </div>
-
-            {/* Tactile note illustration */}
-            <div className="rounded-2xl bg-surface-secondary/70 p-4 border border-border font-hand text-base sm:text-lg text-foreground/95 leading-snug">
-              &ldquo;I wonder how many brilliant, comforting thoughts were deleted right before posting because someone wondered: &lsquo;Will anyone retweet this?&rsquo;&rdquo;
-            </div>
-          </div>
-
-          {/* Block 2: Emotional Humidity (Interactive Tone Demystifier) */}
-          <div className="lg:col-span-5 rounded-3xl bg-surface border border-border p-8 sm:p-10 shadow-xs flex flex-col justify-between space-y-6">
-            <div className="space-y-4">
-              <div className="w-11 h-11 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20">
-                <CompassIcon className="w-5 h-5" />
-              </div>
-              <h3 className="font-heading text-2xl font-normal text-foreground tracking-tight">
-                Words need climate
-              </h3>
-              <p className="text-foreground-secondary leading-relaxed text-sm">
-                Flat text creates endless misunderstandings. A single mood indicator
-                anchors your post in your exact headspace.
-              </p>
-            </div>
-
-            {/* Visual contrast */}
-            <div className="space-y-3 pt-2">
-              <div className="rounded-xl bg-surface-secondary/50 p-3.5 border border-border text-xs text-foreground-secondary space-y-1">
-                <span className="text-[10px] uppercase font-bold text-foreground-secondary/70 tracking-wider">
-                  Flat text alone
-                </span>
-                <p className="italic text-foreground">&ldquo;Sitting by the window watching the rain.&rdquo;</p>
-                <p className="text-[11px] text-foreground-secondary">
-                  (Are they sad? peaceful? bored? depressed?)
-                </p>
-              </div>
-
-              <div className="rounded-xl bg-surface-secondary/80 p-3.5 border border-primary/25 text-xs text-foreground space-y-1.5">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] uppercase font-bold text-primary tracking-wider">
-                    Dump Dump Brain
-                  </span>
-                  <MoodPill mood="peaceful" size="sm" />
+        <div className="space-y-6 sm:space-y-8">
+          <div className="rounded-3xl bg-surface border border-border p-7 sm:p-9 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:border-primary/30 transition-colors">
+            <div className="lg:col-span-7 space-y-3.5">
+              <div className="flex items-center gap-3.5">
+                <div className="w-11 h-11 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0">
+                  <FeatherIcon className="w-5 h-5" />
                 </div>
-                <p className="font-hand text-base font-normal">&ldquo;Sitting by the window watching the rain.&rdquo;</p>
-                <p className="text-[11px] text-primary font-medium">
-                  Instant clarity: gentle peace, cozy comfort.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Block 3: Resonance Over Metrics (Full Width Banner) */}
-          <div className="lg:col-span-12 rounded-3xl bg-surface border border-border/80 p-8 sm:p-10 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="space-y-2 max-w-xl">
-              <div className="flex items-center gap-2">
-                <HeartHandIcon className="w-5 h-5 text-primary" />
-                <h3 className="font-heading text-xl font-normal text-foreground tracking-tight">
-                  Meaningful resonance over empty numbers
+                <h3 className="font-heading text-xl sm:text-2xl lg:text-3xl font-normal text-foreground tracking-tight">
+                  Dumping thoughts makes you calm
                 </h3>
               </div>
-              <p className="text-sm text-foreground-secondary leading-relaxed">
-                A thumbs-up like tells you nothing. A reaction that says &ldquo;I Understand&rdquo; or &ldquo;Heartbreak&rdquo; or &ldquo;Mind Blown&rdquo; tells you a real human being read your words and felt a tremor in their chest.
+              <p className="text-foreground-secondary leading-relaxed text-sm sm:text-base">
+                Sometimes you get stuck overthinking something and you just need
+                to get it out of your head. But reaching out to a stranger feels
+                awkward, and opening up to a close friend can feel too
+                embarrassing. Yet what truly brings you peace and calm is simply
+                sharing what you're thinking with someone.
               </p>
             </div>
 
-            {/* Reaction Pill Cluster */}
-            <div className="flex flex-wrap items-center gap-2">
-              <ReactionPill reaction="understand" count={128} reacted size="sm" />
-              <ReactionPill reaction="loved" count={94} size="sm" />
-              <ReactionPill reaction="melting" count={43} size="sm" />
-              <ReactionPill reaction="mind_blown" count={76} size="sm" />
+            <div className="lg:col-span-5 bg-surface-secondary/60 rounded-2xl p-5 sm:p-6 border border-border/70 space-y-2.5">
+              <div className="flex items-center gap-2 text-xs font-semibold text-primary uppercase tracking-wide">
+                <span>Note</span>
+              </div>
+              <p className="text-xs sm:text-sm text-foreground/85 leading-relaxed">
+                Don't think about how you should write a dump. Just write what
+                is coming out of your mind. It doesn't matter how you are
+                writing it and don't think about it. A purpose of dumping your
+                thoughts is to make you calm.
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-surface border border-border p-7 sm:p-9 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:border-primary/30 transition-colors">
+            <div className="lg:col-span-7 space-y-3.5">
+              <div className="flex items-center gap-3.5">
+                <div className="w-11 h-11 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0">
+                  <SparklesIcon className="w-5 h-5" />
+                </div>
+                <h3 className="font-heading text-xl sm:text-2xl lg:text-3xl font-normal text-foreground tracking-tight">
+                  Hearing the others opens your mind
+                </h3>
+              </div>
+              <p className="text-foreground-secondary leading-relaxed text-sm sm:text-base">
+                Reading people's honest thoughts is genuinely fascinating. You
+                get to see what they're thinking, how they process the world,
+                and what mood they're in while doing it. It constantly opens
+                your mind to those sudden 'Oh, I never thought about it like
+                that!' realizations. On top of learning something new, it's just
+                fun to see what's quietly happening in other minds — with their
+                permission, of course.
+              </p>
+            </div>
+
+            <div className="lg:col-span-5 bg-surface-secondary/60 rounded-2xl p-5 sm:p-6 border border-border/70 space-y-2.5">
+              <div className="flex items-center gap-2 text-xs font-semibold text-primary uppercase tracking-wide">
+                <span>Note</span>
+              </div>
+              <p className="text-xs sm:text-sm text-foreground/85 leading-relaxed">
+                People shouldn't be judged for their thoughts. The moment
+                judgment enters the room, people hide who they truly are. Here,
+                you can explore new perspectives, share what is on your mind,
+                and listen without judgment.
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-surface border border-border p-7 sm:p-9 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:border-primary/30 transition-colors">
+            <div className="lg:col-span-7 space-y-3.5">
+              <div className="flex items-center gap-3.5">
+                <div className="w-11 h-11 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0">
+                  <HandHeartIcon className="w-5 h-5" />
+                </div>
+                <h3 className="font-heading text-xl sm:text-2xl lg:text-3xl font-normal text-foreground tracking-tight">
+                  Get help with what you carry
+                </h3>
+              </div>
+              <p className="text-foreground-secondary leading-relaxed text-sm sm:text-base">
+                Sometimes you get stuck on a dilemma and feel completely drowned
+                in your thoughts. Putting it out there and hearing how others
+                see it can take the weight off your shoulders. You might
+                discover a fresh solution or finally find the clarity you were
+                looking for.
+              </p>
+            </div>
+
+            <div className="lg:col-span-5 bg-surface-secondary/60 rounded-2xl p-5 sm:p-6 border border-border/70 space-y-2.5">
+              <div className="flex items-center gap-2 text-xs font-semibold text-primary uppercase tracking-wide">
+                <span>Note</span>
+              </div>
+              <p className="text-xs sm:text-sm text-foreground/85 leading-relaxed">
+                You don't need a confident conclusion or a brave face. Be honest
+                about what has you stuck — people here reflect and share lived
+                experiences with zero judgment.
+              </p>
             </div>
           </div>
         </div>

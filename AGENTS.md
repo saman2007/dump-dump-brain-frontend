@@ -36,6 +36,10 @@ Meaningful Engagement: Instead of generic thumbs-up likes, engagement is express
 
 3. For typescript types, if you noticed that a type or an interface is general, create that type or interface in `/src/types`.
 
+4. No need to add comments inside jsx templates.
+
+5. Do NOT use HTML entities (such as `&apos;`, `&quot;`, `&lsquo;`, `&rsquo;`, `&ldquo;`, `&rdquo;`) for punctuation in JSX text. Always use standard characters directly (e.g. `'`, `"`, `-`).
+
 ## Folder Structure and Naming Convention
 
 - Components name, files name(inside a folder of `/src/{folderName}`, only in `components` and `containers` folders) and folders name(inside a folder of `/src/{folderName}`, only in `components` and `containers` folders) should be in pascal case.
