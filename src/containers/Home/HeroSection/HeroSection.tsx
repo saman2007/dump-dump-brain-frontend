@@ -24,7 +24,7 @@ export default function HeroSection() {
               what's on your mind. Just drop whatever thought, question, or mood
               is on your mind right now.
             </p>
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1 lg:justify-start justify-center">
               <Button
                 variant="primary"
                 size="lg"

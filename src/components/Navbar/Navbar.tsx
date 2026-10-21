@@ -56,25 +56,22 @@ export default function Navbar() {
           </button>
         </nav>
 
-        {/* Auth & Theme Actions */}
-        <div className="flex items-center gap-2">
+        {/* Desktop Auth & Theme Actions - hidden when hamburger menu is displayed */}
+        <div className="hidden md:flex items-center gap-2">
           <ThemeToggle size="sm" />
-
-          <div className="hidden sm:flex items-center gap-2">
-            <Button variant="ghost" size="sm" href="/sign-in">
-              Sign In
-            </Button>
-            <Button variant="primary" size="sm" href="/sign-up">
-              Sign Up
-            </Button>
-          </div>
+          <Button variant="ghost" size="sm" href="/sign-in">
+            Sign In
+          </Button>
+          <Button variant="primary" size="sm" href="/sign-up">
+            Sign Up
+          </Button>
         </div>
 
         {/* Mobile menu trigger */}
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded-lg text-foreground-secondary hover:text-foreground hover:bg-surface-secondary"
+          className="md:hidden p-2 rounded-lg text-foreground-secondary hover:text-foreground hover:bg-surface-secondary cursor-pointer"
           aria-label="Toggle navigation menu"
         >
           <svg
@@ -102,27 +99,39 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile dropdown menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-border bg-surface px-4 pt-2 pb-6 space-y-3">
-          <button
-            onClick={() => scrollTo("about")}
-            className="block w-full text-left py-2 text-sm font-medium text-foreground-secondary hover:text-foreground cursor-pointer"
-          >
-            About
-          </button>
-          <button
-            onClick={() => scrollTo("philosophy")}
-            className="block w-full text-left py-2 text-sm font-medium text-foreground-secondary hover:text-foreground cursor-pointer"
-          >
-            Philosophy
-          </button>
-          <button
-            onClick={() => scrollTo("stream")}
-            className="block w-full text-left py-2 text-sm font-medium text-foreground-secondary hover:text-foreground cursor-pointer"
-          >
-            Live Dumps
-          </button>
+        <div className="md:hidden border-b border-border bg-surface px-4 pt-3 pb-6 space-y-4">
+          <div className="space-y-1">
+            <button
+              onClick={() => scrollTo("about")}
+              className="block w-full text-left py-2 px-3 rounded-lg text-sm font-medium text-foreground-secondary hover:text-foreground hover:bg-surface-secondary cursor-pointer transition-colors"
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollTo("philosophy")}
+              className="block w-full text-left py-2 px-3 rounded-lg text-sm font-medium text-foreground-secondary hover:text-foreground hover:bg-surface-secondary cursor-pointer transition-colors"
+            >
+              Philosophy
+            </button>
+            <button
+              onClick={() => scrollTo("stream")}
+              className="block w-full text-left py-2 px-3 rounded-lg text-sm font-medium text-foreground-secondary hover:text-foreground hover:bg-surface-secondary cursor-pointer transition-colors"
+            >
+              Live Dumps
+            </button>
+          </div>
+
+          {/* Theme switcher inside mobile menu */}
+          <div className="pt-3 border-t border-border flex items-center justify-between px-3">
+            <span className="text-sm font-medium text-foreground-secondary">
+              Theme
+            </span>
+            <ThemeToggle size="sm" />
+          </div>
+
+          {/* Auth buttons inside mobile menu */}
           <div className="pt-2 flex flex-col gap-2">
             <Button
               variant="outline"
