@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { DUMP_MOOD, MOOD_META } from "@/data/dumpMoods";
 import { ChevronLeftIcon, ChevronRightIcon } from "@/components/Icons";
@@ -36,7 +36,9 @@ export default function MoodFilterSlider({
 
   useEffect(() => {
     if (!emblaApi) return;
+
     updateScrollState(emblaApi);
+
     emblaApi.on("select", updateScrollState);
     emblaApi.on("reInit", updateScrollState);
     emblaApi.on("scroll", updateScrollState);
@@ -58,6 +60,7 @@ export default function MoodFilterSlider({
 
   const handleSelect = (mood: string, index: number) => {
     onSelectMood(mood);
+
     if (emblaApi) {
       emblaApi.scrollTo(index);
     }
@@ -65,7 +68,6 @@ export default function MoodFilterSlider({
 
   return (
     <div className={`relative w-full group/slider ${className}`}>
-      {/* Left scroll arrow button & gradient fade */}
       <div
         className={`absolute left-0 top-0 bottom-0 z-10 flex items-center pr-4 bg-gradient-to-r from-surface-secondary/90 via-surface-secondary/60 to-transparent transition-opacity duration-200 pointer-events-none ${
           canScrollPrev ? "opacity-100" : "opacity-0"
@@ -82,10 +84,8 @@ export default function MoodFilterSlider({
         </button>
       </div>
 
-      {/* Embla Viewport */}
       <div className="overflow-hidden px-1 py-1" ref={emblaRef}>
         <div className="flex gap-2 select-none items-center">
-          {/* All Dumps Chip */}
           <div className="shrink-0">
             <button
               type="button"
@@ -109,7 +109,6 @@ export default function MoodFilterSlider({
             </button>
           </div>
 
-          {/* 13 Mood Chips */}
           {DUMP_MOOD.map((mood, idx) => {
             const meta = MOOD_META[mood];
             const isSelected = selectedMood === mood;
@@ -139,7 +138,6 @@ export default function MoodFilterSlider({
         </div>
       </div>
 
-      {/* Right scroll arrow button & gradient fade */}
       <div
         className={`absolute right-0 top-0 bottom-0 z-10 flex items-center pl-4 bg-gradient-to-l from-surface-secondary/90 via-surface-secondary/60 to-transparent transition-opacity duration-200 pointer-events-none ${
           canScrollNext ? "opacity-100" : "opacity-0"

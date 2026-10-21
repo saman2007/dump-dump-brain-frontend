@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Button from "../Button/Button";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { LogoIcon } from "../Icons/LogoIcon";
@@ -10,7 +10,9 @@ export default function Navbar() {
 
   const scrollTo = (id: string) => {
     setMobileMenuOpen(false);
+
     const element = document.getElementById(id);
+
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -19,7 +21,6 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/80 backdrop-blur-md transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        {/* Brand */}
         <button
           onClick={() => scrollTo("about")}
           className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg p-1 -m-1 text-left cursor-pointer"
@@ -34,7 +35,6 @@ export default function Navbar() {
           </div>
         </button>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-foreground-secondary">
           <button
             onClick={() => scrollTo("about")}
@@ -56,7 +56,6 @@ export default function Navbar() {
           </button>
         </nav>
 
-        {/* Desktop Auth & Theme Actions - hidden when hamburger menu is displayed */}
         <div className="hidden md:flex items-center gap-2">
           <ThemeToggle size="sm" />
           <Button variant="ghost" size="sm" href="/sign-in">
@@ -67,7 +66,6 @@ export default function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile menu trigger */}
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -99,7 +97,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile dropdown menu */}
       {mobileMenuOpen && (
         <div className="md:hidden border-b border-border bg-surface px-4 pt-3 pb-6 space-y-4">
           <div className="space-y-1">
@@ -123,7 +120,6 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Theme switcher inside mobile menu */}
           <div className="pt-3 border-t border-border flex items-center justify-between px-3">
             <span className="text-sm font-medium text-foreground-secondary">
               Theme
@@ -131,7 +127,6 @@ export default function Navbar() {
             <ThemeToggle size="sm" />
           </div>
 
-          {/* Auth buttons inside mobile menu */}
           <div className="pt-2 flex flex-col gap-2">
             <Button
               variant="outline"

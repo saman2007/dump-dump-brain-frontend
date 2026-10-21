@@ -4,7 +4,7 @@ import { useState } from "react";
 import DumpCard, { DumpPost } from "./DumpCard";
 import Button from "@/components/Button/Button";
 import { ArrowRightIcon } from "@/components/Icons/ArrowRightIcon";
-import MoodFilterSlider from "@/components/MoodFilterSlider/MoodFilterSlider";
+import MoodFilterSlider from "@/containers/Home/StreamPreviewSection/MoodFilterSlider";
 const SAMPLE_POSTS: DumpPost[] = [
   {
     id: "post-1",
