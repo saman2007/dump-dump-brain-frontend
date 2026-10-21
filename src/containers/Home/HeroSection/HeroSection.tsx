@@ -5,7 +5,10 @@ import { ArrowRightIcon } from "@/components/Icons/ArrowRightIcon";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32">
+    <section
+      id="about"
+      className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32"
+    >
       <div className="absolute top-10 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute top-1/2 right-10 w-80 h-80 bg-teal-300/10 dark:bg-teal-900/15 rounded-full blur-3xl pointer-events-none -z-10" />
 

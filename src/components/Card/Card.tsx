@@ -36,7 +36,7 @@ export default function Card({
         paddingStyles[padding]
       } ${
         hoverable
-          ? "hover:border-foreground/25 hover:shadow-md hover:-translate-y-0.5"
+          ? "hover:border-primary hover:shadow-md hover:-translate-y-0.5"
           : ""
       } ${className}`}
       {...props}

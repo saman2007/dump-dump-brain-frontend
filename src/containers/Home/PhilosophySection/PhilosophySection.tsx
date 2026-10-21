@@ -14,7 +14,7 @@ export default function PhilosophySection() {
               Social feeds made us perform.
               <br />
               <span className="text-primary italic">
-                We just wanted to be ourselves.
+                We want to be ourselves.
               </span>
             </h2>
           </div>
@@ -29,7 +29,7 @@ export default function PhilosophySection() {
         </div>
 
         <div className="space-y-6 sm:space-y-8">
-          <div className="rounded-3xl bg-surface border border-border p-7 sm:p-9 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:border-primary/30 transition-colors">
+          <div className="rounded-3xl bg-surface border border-border p-7 sm:p-9 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:border-primary transition-colors">
             <div className="lg:col-span-7 space-y-3.5">
               <div className="flex items-center gap-3.5">
                 <div className="w-11 h-11 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0">
@@ -61,7 +61,7 @@ export default function PhilosophySection() {
             </div>
           </div>
 
-          <div className="rounded-3xl bg-surface border border-border p-7 sm:p-9 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:border-primary/30 transition-colors">
+          <div className="rounded-3xl bg-surface border border-border p-7 sm:p-9 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:border-primary transition-colors">
             <div className="lg:col-span-7 space-y-3.5">
               <div className="flex items-center gap-3.5">
                 <div className="w-11 h-11 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0">
@@ -95,7 +95,7 @@ export default function PhilosophySection() {
             </div>
           </div>
 
-          <div className="rounded-3xl bg-surface border border-border p-7 sm:p-9 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:border-primary/30 transition-colors">
+          <div className="rounded-3xl bg-surface border border-border p-7 sm:p-9 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center hover:border-primary transition-colors">
             <div className="lg:col-span-7 space-y-3.5">
               <div className="flex items-center gap-3.5">
                 <div className="w-11 h-11 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shrink-0">

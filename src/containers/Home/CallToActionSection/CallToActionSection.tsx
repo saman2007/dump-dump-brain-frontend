@@ -23,13 +23,12 @@ export default function CallToActionSection() {
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-normal text-foreground tracking-tight leading-tight">
               Your head is full.
               <br />
-              <span className="text-primary italic">
-                Let it out.
-              </span>
+              <span className="text-primary italic">Let it out.</span>
             </h2>
             <p className="text-base sm:text-lg text-foreground-secondary leading-relaxed">
-              Stop letting fleeting epiphanies, sudden aches, and curious musings
-              vanish into mental static. Create your free sanctuary and breathe again.
+              Stop letting fleeting epiphanies, sudden aches, and curious
+              musings vanish into mental static. Create your free sanctuary and
+              breathe again.
             </p>
           </div>
 
@@ -52,14 +51,6 @@ export default function CallToActionSection() {
             >
               Sign In
             </Button>
-          </div>
-
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-4 text-xs text-foreground-secondary">
-            <span>Free forever for personal dumps</span>
-            <span>·</span>
-            <span>Zero ads</span>
-            <span>·</span>
-            <span>Your data is never sold</span>
           </div>
         </div>
       </div>

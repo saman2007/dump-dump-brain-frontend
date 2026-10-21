@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
-import { FeatherIcon } from "../Icons/FeatherIcon";
 import { LogoIcon } from "../Icons/LogoIcon";
 
 export default function Navbar() {
@@ -21,9 +20,9 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/80 backdrop-blur-md transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Brand */}
-        <a
-          href="#"
-          className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg p-1 -m-1"
+        <button
+          onClick={() => scrollTo("about")}
+          className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg p-1 -m-1 text-left cursor-pointer"
         >
           <div className="w-10 h-10 flex items-center justify-center group-hover:scale-105 transition-transform">
             <LogoIcon className="w-9 h-9" />
@@ -33,22 +32,21 @@ export default function Navbar() {
               dump dump brain
             </span>
           </div>
-        </a>
+        </button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-foreground-secondary">
+          <button
+            onClick={() => scrollTo("about")}
+            className="hover:text-foreground transition-colors cursor-pointer"
+          >
+            About
+          </button>
           <button
             onClick={() => scrollTo("philosophy")}
             className="hover:text-foreground transition-colors cursor-pointer"
           >
             Philosophy
-          </button>
-          <button
-            onClick={() => scrollTo("concept")}
-            className="hover:text-foreground transition-colors cursor-pointer flex items-center gap-1.5"
-          >
-            <FeatherIcon className="w-3.5 h-3.5 text-primary" />
-            The Dump Way
           </button>
           <button
             onClick={() => scrollTo("stream")}
@@ -108,20 +106,20 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="md:hidden border-b border-border bg-surface px-4 pt-2 pb-6 space-y-3">
           <button
+            onClick={() => scrollTo("about")}
+            className="block w-full text-left py-2 text-sm font-medium text-foreground-secondary hover:text-foreground cursor-pointer"
+          >
+            About
+          </button>
+          <button
             onClick={() => scrollTo("philosophy")}
-            className="block w-full text-left py-2 text-sm font-medium text-foreground-secondary hover:text-foreground"
+            className="block w-full text-left py-2 text-sm font-medium text-foreground-secondary hover:text-foreground cursor-pointer"
           >
             Philosophy
           </button>
           <button
-            onClick={() => scrollTo("concept")}
-            className="block w-full text-left py-2 text-sm font-medium text-foreground-secondary hover:text-foreground"
-          >
-            The Dump Way
-          </button>
-          <button
             onClick={() => scrollTo("stream")}
-            className="block w-full text-left py-2 text-sm font-medium text-foreground-secondary hover:text-foreground"
+            className="block w-full text-left py-2 text-sm font-medium text-foreground-secondary hover:text-foreground cursor-pointer"
           >
             Live Dumps
           </button>
