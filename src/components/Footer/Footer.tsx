@@ -1,11 +1,26 @@
+import { cacheLife } from "next/cache";
 import { LogoIcon } from "../Icons/LogoIcon";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
-export default function Footer() {
+export default async function Footer() {
+  "use cache";
+
+  const now = new Date();
+  const nextYear = new Date(now.getFullYear() + 1, 0, 1);
+  const secondsUntilNewYear = Math.max(
+    1,
+    Math.ceil((nextYear.getTime() - now.getTime()) / 1000),
+  );
+
+  cacheLife({
+    stale: 60 * 60, // 1 hour
+    revalidate: 60 * 60 * 24, // 1 day
+    expire: secondsUntilNewYear + 60 * 61, // To make it greater than stale time
+  });
+
   return (
     <footer className="border-t border-border bg-surface-secondary/40 transition-colors py-10 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto space-y-8">
-        {/* Brand info */}
         <div className="space-y-3 max-w-xl">
           <div className="flex items-center gap-2.5">
             <LogoIcon className="w-8 h-8" />
@@ -21,7 +36,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Bottom bar */}
         <div className="pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-foreground-secondary">
           <p>
             © {new Date().getFullYear()} Dump Dump Brain. Made for authentic
