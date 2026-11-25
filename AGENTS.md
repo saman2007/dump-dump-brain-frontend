@@ -40,6 +40,8 @@ Meaningful Engagement: Instead of generic thumbs-up likes, engagement is express
 
 5. Do NOT use HTML entities (such as `&apos;`, `&quot;`, `&lsquo;`, `&rsquo;`, `&ldquo;`, `&rdquo;`) for punctuation in JSX text. Always use standard characters directly (e.g. `'`, `"`, `-`).
 
+6. DON't build the project after changing! Unless it is really necessary. If you want to build the project, ask for my approval.
+
 ## Folder Structure and Naming Convention
 
 - Components name, files name(inside a folder of `/src/{folderName}`, only in `components` and `containers` folders) and folders name(inside a folder of `/src/{folderName}`, only in `components` and `containers` folders) should be in pascal case.
