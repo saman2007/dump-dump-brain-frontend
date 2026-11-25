@@ -7,15 +7,11 @@ import CallToActionSection from "./CallToActionSection/CallToActionSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground">
-      <Navbar />
-      <main className="flex-1">
-        <HeroSection />
-        <PhilosophySection />
-        <StreamPreviewSection />
-        <CallToActionSection />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <HeroSection />
+      <PhilosophySection />
+      <StreamPreviewSection />
+      <CallToActionSection />
+    </>
   );
 }

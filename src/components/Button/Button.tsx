@@ -1,10 +1,10 @@
+import Link from "next/link";
 import React from "react";
 
 export type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
 export type ButtonSize = "sm" | "md" | "lg";
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   size?: ButtonSize;
   icon?: React.ReactNode;
@@ -48,11 +48,7 @@ export default function Button({
 
   if (href) {
     return (
-      <a
-        href={href}
-        className={combinedClasses}
-        aria-disabled={disabled}
-      >
+      <Link href={href} className={combinedClasses} aria-disabled={disabled}>
         {icon && iconPosition === "left" && (
           <span className="shrink-0">{icon}</span>
         )}
@@ -60,16 +56,12 @@ export default function Button({
         {icon && iconPosition === "right" && (
           <span className="shrink-0">{icon}</span>
         )}
-      </a>
+      </Link>
     );
   }
 
   return (
-    <button
-      className={combinedClasses}
-      disabled={disabled}
-      {...props}
-    >
+    <button className={combinedClasses} disabled={disabled} {...props}>
       {icon && iconPosition === "left" && (
         <span className="shrink-0">{icon}</span>
       )}

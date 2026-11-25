@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Patrick_Hand, Paytone_One, Roboto } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 const roboto = Roboto({
   weight: ["400", "500", "700"],
@@ -58,7 +60,11 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
-        {children}
+        <main className="min-h-screen flex flex-col bg-background text-foreground">
+          <Navbar />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

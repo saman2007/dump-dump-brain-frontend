@@ -4,25 +4,16 @@ import { useState } from "react";
 import Button from "../Button/Button";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { LogoIcon } from "../Icons/LogoIcon";
+import Link from "next/link";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const scrollTo = (id: string) => {
-    setMobileMenuOpen(false);
-
-    const element = document.getElementById(id);
-
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/80 backdrop-blur-md transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <button
-          onClick={() => scrollTo("about")}
+        <Link
+          href="/#about"
           className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg p-1 -m-1 text-left cursor-pointer"
         >
           <div className="w-10 h-10 flex items-center justify-center group-hover:scale-105 transition-transform">
@@ -33,27 +24,27 @@ export default function Navbar() {
               dump dump brain
             </span>
           </div>
-        </button>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-foreground-secondary">
-          <button
-            onClick={() => scrollTo("about")}
+          <Link
+            href="/#about"
             className="hover:text-foreground transition-colors cursor-pointer"
           >
             About
-          </button>
-          <button
-            onClick={() => scrollTo("philosophy")}
+          </Link>
+          <Link
+            href="/#philosophy"
             className="hover:text-foreground transition-colors cursor-pointer"
           >
             Philosophy
-          </button>
-          <button
-            onClick={() => scrollTo("stream")}
+          </Link>
+          <Link
+            href="/#stream"
             className="hover:text-foreground transition-colors cursor-pointer"
           >
             Live Dumps
-          </button>
+          </Link>
         </nav>
 
         <div className="hidden md:flex items-center gap-2">
@@ -100,24 +91,24 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="md:hidden border-b border-border bg-surface px-4 pt-3 pb-6 space-y-4">
           <div className="space-y-1">
-            <button
-              onClick={() => scrollTo("about")}
+            <Link
+              href="/#about"
               className="block w-full text-left py-2 px-3 rounded-lg text-sm font-medium text-foreground-secondary hover:text-foreground hover:bg-surface-secondary cursor-pointer transition-colors"
             >
               About
-            </button>
-            <button
-              onClick={() => scrollTo("philosophy")}
+            </Link>
+            <Link
+              href="/#philosophy"
               className="block w-full text-left py-2 px-3 rounded-lg text-sm font-medium text-foreground-secondary hover:text-foreground hover:bg-surface-secondary cursor-pointer transition-colors"
             >
               Philosophy
-            </button>
-            <button
-              onClick={() => scrollTo("stream")}
+            </Link>
+            <Link
+              href="/#stream"
               className="block w-full text-left py-2 px-3 rounded-lg text-sm font-medium text-foreground-secondary hover:text-foreground hover:bg-surface-secondary cursor-pointer transition-colors"
             >
               Live Dumps
-            </button>
+            </Link>
           </div>
 
           <div className="pt-3 border-t border-border flex items-center justify-between px-3">
